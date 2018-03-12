@@ -1,0 +1,35 @@
+.main{
+  width: 200px;
+}
+
+
+.active{
+  color: yellow;
+  background-color: black;
+  border:1px dotted yellow;
+  margin: 5px;
+}
+
+table, td {
+    border: 1px solid black;
+    margin-top:30px;
+}
+
+tr{
+  width: 150px;
+  height: 30px;
+}
+
+td{
+  width: 400px;
+}
+
+#test{
+  width:100px;
+  height: 20px;
+  background-color: red;
+}
+
+li{
+  list-style: none;
+}

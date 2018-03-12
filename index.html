@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>exo onclick</title>
+  </head>
+  <body>
+    <div class="main">
+        <p id="action" class="not-active">Challenge du weekend</p>
+
+
+        <input id="formulaire"></input>
+        <button id="ajouter_nom">Ajouter nom</button>
+
+
+        <table id="mytable">
+            <tr>
+              <td></td>
+            </tr>
+        </table>
+
+      <button id="tirage">tirage au sort</button>
+      <input id="vainqueur"></input>
+
+
+    <div>
+
+
+
+
+  <script>
+
+var texte = document.getElementById("action");
+var count = 1;
+
+texte.onclick=function(){
+  /*if(count==0){
+
+    texte.style.color="black";
+    texte.style.backgroundColor=null;
+    texte.style.border=null;
+    texte.style.margin=null;
+    count=1
+}else{
+    texte.style.color="yellow";
+    texte.style.backgroundColor="black";
+    texte.style.border="1px dotted red";
+    texte.style.margin="5px";
+    count=0;
+  }
+*/
+if(count==0){
+texte.className = "";
+count=1
+}else{
+texte.className = "active";
+count=0
+}
+}
+
+////tableau
+
+
+//var newName = document.getElementById('formulaire').value
+var nom = document.getElementById('ajouter_nom');
+//var row = document.getElementById('row1');
+var table = document.getElementById("mytable");
+var cellule = document.getElementById('row');
+
+nom.onclick=function(){
+//var cellule = document.getElementsByClassName('row');
+
+//row.textContent = document.getElementById('formulaire').value
+/*for (var i = 0 ; i<cellule.length; i++){
+if(cellule.value == null){
+  cellule[i].textContent = document.getElementById('formulaire').value
+}else{
+  cellule[i+1].textContent = document.getElementById('formulaire').value
+}
+
+}*/
+//cellule.textContent = document.getElementById('formulaire').value
+//var node = document.createElement('tr');
+var table = document.getElementById("mytable");
+var row = table.insertRow(0);
+var node = row.insertCell(0);
+var texte = node.textContent;
+node.textContent = document.getElementById('formulaire').value
+//var newName = texte.appendChild(texte)
+
+}
+
+
+var tirage = document.getElementById('tirage')
+var cell = table.getElementsByTagName('td')
+var liste = document.getElementsByClassName('nom')
+
+//var candidat = cell.value
+//console.log(candidat)
+
+tirage.onclick = function(){
+
+  cell.className +="nom"
+  var liste = document.getElementsByClassName('nom')
+console.log(liste)
+
+
+
+}
+
+
+  </script>
+  </body>
+</html>
