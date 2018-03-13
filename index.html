@@ -67,6 +67,7 @@ var nom = document.getElementById('ajouter_nom');
 //var row = document.getElementById('row1');
 var table = document.getElementById("mytable");
 var cellule = document.getElementById('row');
+var array = [];
 
 nom.onclick=function(){
 //var cellule = document.getElementsByClassName('row');
@@ -87,26 +88,20 @@ var row = table.insertRow(0);
 var node = row.insertCell(0);
 var texte = node.textContent;
 node.textContent = document.getElementById('formulaire').value
-//var newName = texte.appendChild(texte)
+
+array.push(document.getElementById('formulaire').value)
 
 }
+console.log(array)
 
+var tirage = document.getElementById('tirage');
 
-var tirage = document.getElementById('tirage')
-var cell = table.getElementsByTagName('td')
-var liste = document.getElementsByClassName('nom')
-
-//var candidat = cell.value
-//console.log(candidat)
 
 tirage.onclick = function(){
-
-  cell.className +="nom"
-  var liste = document.getElementsByClassName('nom')
-console.log(liste)
-
-
-
+  var gagnant = Math.floor(Math.random() * array.length);
+  console.log(gagnant)
+  var vainqueur = document.getElementById('vainqueur')
+    vainqueur.value = array[gagnant];
 }
 
 
